@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hành Trình Tình Yêu - PokeLove</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <!-- Lớp phủ mờ nền -->
+    <div class="bg-overlay"></div>
+
+    <!-- Header -->
+    <header class="top-header">
+        <div class="logo-box">
+            <div class="pokeball-icon"></div>
+            <span class="logo-text">PokeLove <i class="fa-solid fa-heart"></i></span>
+        </div>
+        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Đăng xuất</a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Phần Chào Mừng & Lời Ngỏ -->
+        <section class="welcome-section">
+            <h1 class="main-title">Dành Riêng Cho Em - Nguyễn Thùy Dương <i class="fa-solid fa-heart"></i></h1>
+            <p class="sub-title">Cảm ơn em vì đã bước vào thế giới của anh và tạo nên những điều tuyệt vời nhất.</p>
+        </section>
+
+        <!-- Đồng Hồ Đếm Thời Gian Yêu Nhau -->
+        <section class="love-counter-card">
+            <h2><i class="fa-solid fa-clock-rotate-left"></i> Thời gian chúng ta bên nhau</h2>
+            <div class="counter-grid">
+                <div class="counter-box">
+                    <span id="days">0</span>
+                    <p>Ngày</p>
+                </div>
+                <div class="counter-box">
+                    <span id="hours">0</span>
+                    <p>Giờ</p>
+                </div>
+                <div class="counter-box">
+                    <span id="minutes">0</span>
+                    <p>Phút</p>
+                </div>
+                <div class="counter-box">
+                    <span id="seconds">0</span>
+                    <p>Giây</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dòng Thời Gian Kỷ Niệm (Timeline) -->
+        <section class="timeline-section">
+            <h2 class="section-heading"><i class="fa-solid fa-star"></i> Những cột mốc của chúng mình</h2>
+            
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Ngày bắt đầu yêu (08/01/2026) ❤️</h3>
+                        <p>Hong biết em còn nhớ ngày lần đầu anh yêu em Hong<br>
+                            Ngày mà em phát ngôn câu ấy ấy làm anh nhớ mãi <br>
+                            Cảm giác coa người dỗ dành vui lắm cục cưng ạ yêu nhắm<br>
+                            Anh thích được thế cả thích xoa đầu mà em chả làm bao giờ haiz 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Buổi đi chs đầu tiênnnn 🌸</h3>
+                        <p>
+                            Thật ra là mình đi chơi lần đầu ở rạp phim lúc đấy đông quá nên mình k tính nhóe <br>
+                            Rồi mình đi chơi ở hồ Gươm nè nhưng lúc đấy có My và VT haiz <br>
+                            Thế em nhớ mình đi chs lần đầu như nào k chắc là k nhớ r<br>
+                            Mặc dù k phải đi chs nhưng lần đấy anh đc chở em là lúc mình buồn gì giận gì á<br>
+                            Xong roài anh nằng nặc đòi ra chở em mãi em ms cho đi xong anh chở em lượn khắp HN luôn<br>
+                            Em nhớ chưa hỏ lúc đấy 2 mình bê bết quá hihi nhưng vẫn là 1 kỉ niệm đẹp ha Yêu em 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Cùng nhau trải qua những lúc thăng trầm bùn khóc haiz😭</h3>
+                        <p>Mặc dù mình có nhiều lúc cãi nhau<br>
+                            Có nhiều lúc mình chửi nhau như chóa<br>
+                            Nhiều lúc anh nghĩ rời đi nhưng thực chất<br> 
+                            Anh muốn em nhìn anh yêu anh cơ kh muốn em đi âu<br>
+                            Anh yêu em lắm nếu 1 ngày anh bảo rời đi em đồng ý <br>
+                            Xong em có người mới thì anh buồn vcl chứ k phải hp như anh nói âu<br>
+                            Thế nên là anh mún nói anh yêu bé nhất trên đời hihi 
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Album Ảnh Kỷ Niệm (Polaroid Style) -->
+        <section class="gallery-section">
+            <h2 class="section-heading"><i class="fa-solid fa-images"></i> Góc Kỷ Niệm Của Chúng Mình</h2>
+            <div class="gallery-grid">
+                <div class="polaroid-card">
+                    <img src="dibo.jpg" alt="Kỷ niệm">
+                    <p>Hình như đây là lần đầu mình đi công viên nè </p>
+                </div>
+                <div class="polaroid-card">
+                    <img src="nămtay.jpg" alt="Kỷ niệm">
+                    <p>Đu trend nắm tay ựa</p>
+                </div>
+                <div class="polaroid-card">
+                    <img src="diphotobut.jpg" alt="Kỷ niệm">
+                    <p>Lần đầu 2 đứa đi photobooth 🥰</p>
+                </div>
+                 <div class="polaroid-card">
+                    <img src="cuteee.jpg" alt="Kỷ niệm">
+                    <p>Trời ơi chụp bóng cute quá hihi</p>
+                </div>
+                <div class="polaroid-card">
+                    <img src="gương.jpg" alt="Kỷ niệm">
+                    <p>Yêu cái gương xe Dương quá ựa ựa</p>
+                </div>
+                <div class="polaroid-card">
+                    <img src="hẹhej.jpg" alt="Kỷ niệm">
+                    <p>Uây hình nền máy Tuấn nè kk</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Danh sách những điều anh yêu ở em -->
+        <section class="love-reasons">
+            <h2 class="section-heading"><i class="fa-solid fa-heart-pulse"></i> Những điều tôi yêu ở em</h2>
+            <ul class="reasons-list">
+                <li><i class="fa-solid fa-check"></i> Em tử tế dịu dàng cute </li>
+                <li><i class="fa-solid fa-check"></i> Luôn quan tâm đến Tuấn trừ lúc Dương cọc vcl</li>
+                <li><i class="fa-solid fa-check"></i> Không bỏ tôi dù tôi có buồn tôi tiêu cực yêuuuuu </li>
+                <li><i class="fa-solid fa-check"></i> Biết toai hết tiền nhưng vẫn cố gắng an ủi và còn cho toai tiền nữa (Phú bà)</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Tuấn yêu em Dương nhất trên đời ạ ❤️ 2026</p>
+    </footer>
+
+ 
+<!-- JavaScript tính thời gian yêu nhau từ tháng 1/2026 -->
+<script>
+    function updateCounter() {
+        // Mốc bắt đầu: Ngày 8 tháng 1 năm 2026 (Tháng 1 trong JS là số 0)
+        const startDate = new Date(2026, 0, 8, 0, 0, 0); 
+        
+        const now = new Date();
+        const diff = now - startDate;
+
+        if (diff < 0) {
+            document.getElementById('days').innerText = 0;
+            document.getElementById('hours').innerText = 0;
+            document.getElementById('minutes').innerText = 0;
+            document.getElementById('seconds').innerText = 0;
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / 1000 / 60) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        // Hiển thị kết quả lên trang web
+        document.getElementById('days').innerText = days;
+        document.getElementById('hours').innerText = hours;
+        document.getElementById('minutes').innerText = minutes;
+        document.getElementById('seconds').innerText = seconds;
+    }
+
+    setInterval(updateCounter, 1000);
+    updateCounter();
+</script>
+</body>
+</html>

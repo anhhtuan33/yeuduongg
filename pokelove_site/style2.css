@@ -1,0 +1,313 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url('pokemon-bg.png') center/cover no-repeat fixed;
+    background-color: #ffe6f0;
+    position: relative;
+    color: #5a4b5c;
+    overflow-x: hidden;
+}
+
+/* Lớp phủ nền */
+.bg-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 235, 243, 0.35);
+    backdrop-filter: blur(4px);
+    z-index: 0;
+}
+
+/* Header */
+.top-header {
+    position: relative;
+    z-index: 2;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px 22px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+    border: 2px solid #ffffff;
+}
+
+.pokeball-icon {
+    width: 26px;
+    height: 26px;
+    background: linear-gradient(to bottom, #ff5e83 50%, #ffffff 50%);
+    border-radius: 50%;
+    border: 2px solid #5a4b5c;
+    position: relative;
+}
+.pokeball-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px; height: 8px;
+    background: #fff;
+    border: 2px solid #5a4b5c;
+    border-radius: 50%;
+}
+
+.logo-text {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #e8557a;
+}
+
+.back-btn {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px 18px;
+    border-radius: 20px;
+    color: #e8557a;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4);
+    transition: background 0.2s;
+}
+.back-btn:hover {
+    background: #fff;
+    color: #ff5e83;
+}
+
+/* Main Container */
+.main-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 35px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(232, 85, 122, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.main-title {
+    font-family: 'Caveat', cursive;
+    font-size: 3rem;
+    color: #8c2a4e;
+    margin-bottom: 10px;
+}
+.main-title i {
+    color: #ff6b8b;
+    font-size: 2.2rem;
+}
+
+.sub-title {
+    font-size: 1.1rem;
+    color: #7a6879;
+    font-weight: 600;
+}
+
+/* Love Counter */
+.love-counter-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(232, 85, 122, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.love-counter-card h2 {
+    font-size: 1.5rem;
+    color: #e8557a;
+    margin-bottom: 20px;
+}
+
+.counter-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.counter-box {
+    background: #fff5f8;
+    border: 2px solid #ffccd5;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.counter-box span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #e8557a;
+}
+
+.counter-box p {
+    font-size: 0.9rem;
+    color: #7a6879;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+/* Timeline Section */
+.timeline-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 35px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(232, 85, 122, 0.15);
+}
+
+.section-heading {
+    font-size: 1.6rem;
+    color: #8c2a4e;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.timeline-container {
+    position: relative;
+    padding-left: 30px;
+    border-left: 3px dashed #ffb6c1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -37px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background: #ff5e83;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #ffb6c1;
+}
+
+.timeline-content h3 {
+    font-size: 1.15rem;
+    color: #e8557a;
+    margin-bottom: 5px;
+}
+
+.timeline-content p {
+    font-size: 0.95rem;
+    color: #6b5268;
+    line-height: 1.5;
+}
+
+/* Gallery Section */
+.gallery-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 35px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(232, 85, 122, 0.15);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.polaroid-card {
+    background: #ffffff;
+    padding: 12px 12px 18px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.polaroid-card:hover {
+    transform: translateY(-5px);
+}
+
+.polaroid-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.polaroid-card p {
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #5a4b5c;
+}
+
+/* Reasons Section */
+.love-reasons {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 35px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(232, 85, 122, 0.15);
+}
+
+.reasons-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reasons-list li {
+    background: #fff5f8;
+    padding: 14px 20px;
+    border-radius: 16px;
+    font-weight: 600;
+    color: #6b5268;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #ffccd5;
+}
+
+.reasons-list li i {
+    color: #ff5e83;
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    color: #8c7389;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .counter-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}

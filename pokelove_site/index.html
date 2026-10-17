@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>không có tiền nên anh làm web</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Layer lớp phủ mờ nhẹ -->
+    <div class="bg-overlay"></div>
+
+    <!-- Header / Logo Top Left -->
+    <header class="top-header">
+        <div class="logo-box">
+            <div class="pokeball-icon"></div>
+            <span class="logo-text">PokeLove <i class="fa-solid fa-heart"></i></span>
+        </div>
+    </header>
+
+    <!-- Container chính gồm 2 cột: BÊN TRÁI (Pokémon) & BÊN PHẢI (Đăng nhập) -->
+    <main class="main-container">
+        
+        <!-- CỘT BÊN TRÁI: Dành cho hình Pokémon & Lời nhắn -->
+        <section class="left-content">
+            <div class="handwritten-message">
+                <h2>Dành riêng cho<br>em yêu của anh <i class="fa-regular fa-heart"></i></h2>
+                <p>Dù là trong game hay ngoài đời,<br>anh vẫn luôn muốn<br>đồng hành cùng em... <i class="fa-regular fa-heart"></i></p>
+            </div>
+        </section>
+
+        <!-- CỘT BÊN PHẢI: Khung Đăng nhập -->
+        <section class="login-card">
+            <!-- Icon trang trí ở đầu form -->
+            <div class="card-header-decor">
+                <div class="center-pokeball"></div>
+            </div>
+
+            <h1 class="card-title">
+                <span class="pink-heart">♥</span> Đăng nhập <span class="pink-heart">♥</span>
+            </h1>
+            
+            <p class="card-subtitle">Chào mừng em đến với trang web nè</p>
+            <p class="card-subtext">Cùng nhau bước tiếp đến với nhau nhiều hơn nhé Yêu Dương <i class="fa-regular fa-heart"></i></p>
+
+            <!-- Form đăng nhập -->
+            <form class="login-form" id="loginForm">
+                <!-- Tên đăng nhập -->
+                <div class="form-group">
+                    <label><i class="fa-solid fa-paw"></i> Nguyễn Thùy Dương</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-user left-icon"></i>
+                        <input type="text" value="Nguyễn Thùy Dương" required>
+                        <i class="fa-regular fa-heart right-icon"></i>
+                    </div>
+                </div>
+
+                <!-- Mật khẩu -->
+                <div class="form-group">
+                    <label><i class="fa-solid fa-lock"></i> Mật khẩu</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock left-icon"></i>
+                        <input type="password" id="passwordInput" placeholder="Ngày mà tôi yêu em á" required>
+                        <i class="fa-regular fa-eye right-icon" id="togglePassword" style="cursor: pointer;"></i>
+                    </div>
+                </div>
+
+                <!-- Nút Đăng Nhập -->
+                <button type="submit" class="btn-submit">
+                    <div class="btn-pokeball"></div>
+                    Đăng nhập
+                    <i class="fa-solid fa-heart"></i>
+                </button>
+            </form>
+
+            <!-- Lời nhắn chân trang form -->
+            <div class="card-footer-note">
+                <i class="fa-solid fa-heart footer-heart"></i>
+                <div>
+                    <p>Cảm ơn em vì đã luôn ở đây!</p>
+                    <p class="highlight">Yêu em nhiều lắm <i class="fa-regular fa-heart"></i></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JAVASCRIPT ĐÃ SỬA LỖI -->
+    <script>
+        const passwordInput = document.getElementById('passwordInput');
+        const togglePassword = document.getElementById('togglePassword');
+
+        // Tính năng ẩn/hiện mật khẩu khi bấm vào icon con mắt bên cạnh ô mật khẩu
+        togglePassword.addEventListener('click', function() {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                togglePassword.classList.remove('fa-eye');
+                togglePassword.classList.add('fa-eye-slash'); // Đổi icon thành mắt gạch chéo cho sinh động
+            } else {
+                passwordInput.type = 'password';
+                togglePassword.classList.remove('fa-eye-slash');
+                togglePassword.classList.add('fa-eye');
+            }
+        });
+
+        // Kiểm tra mật khẩu khi nhấn Đăng nhập
+        const loginForm = document.getElementById('loginForm');
+        
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Chặn load lại trang
+            
+            const correctPassword = "08012025"; // Mật khẩu đúng
+            const enteredPassword = passwordInput.value.trim();
+
+            if (enteredPassword === correctPassword) {
+                alert("Đăng nhập thành công! Chào em yêu của anh Nguyễn Thùy Dương ❤️");
+                // Chuyển hướng sang trang web 2
+                window.location.href = "page2.html"; 
+            } else {
+                alert("Mật khẩu chưa chính xác òi thì ra m không nhớ haiz 🥺");
+                passwordInput.focus();
+            }
+        });
+    </script>
+</body>
+</html>
